@@ -1,0 +1,8 @@
+apiVersion: policy.jspolicy.com/v1beta1
+kind: JsPolicy
+metadata:
+  name: validate-namespace.mycompany.tld
+spec:
+  operations: [CREATE]
+  resources: ["*"]
+  scope: Namespaced
