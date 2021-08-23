@@ -12,7 +12,7 @@ export function validateContainerImages(podSpec?: V1PodSpec): string[] {
         }
     })
     
-    podSpec?.containers?.forEach((container: V1Container, index: number) => {
+    podSpec?.initContainers?.forEach((container: V1Container, index: number) => {
         if (container.image?.match(allowedImageRegex)?.length != 1) {
             errors.push("Field spec.initContainers[" + index + "].image must match regex: " + allowedImagePattern)
         }
