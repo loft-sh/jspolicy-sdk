@@ -6,4 +6,4 @@ spec:
   operations: [CREATE, UPDATE]
   resources: ["*"]
   scope: Namespaced
-  mutating: true
+  type: Mutating
