@@ -1,5 +1,5 @@
 export function denyOnErrors(...errors: Array<string[]>) {
-    const combinedErrors: string[] = [].concat.apply(errors)
+    const combinedErrors: string[] = errors.flat()
     if (combinedErrors.length > 0) {
         deny("Request denied because of the following errors:\n-" + combinedErrors.join("\n-"));
     }
